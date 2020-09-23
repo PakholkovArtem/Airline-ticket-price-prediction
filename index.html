@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Flight Price</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+
+			<header class="header">
+				<div class="header_container">
+					<nav class="nav">
+						<h2 class="header_head">
+							<div class="header_text">Flight Price</div>
+						</h2>
+					</nav>
+				</div>	
+			</header>
+
+			<form action="\predict" method="post">
+
+				<section class="data">
+					<div class="data_container">
+
+						<div class="first_row row">
+							<div class="departure  choice">
+								<div class="departure_container  container">
+									<div class="departure_content content">
+										<h2 class="departure_name name">
+											Departure Date
+										</h2>	
+										<input class="departure_form" type="date" name="Dep_Time" id="Dep_Time" required="required">
+									</div>
+								</div>
+							</div>
+							<div class="arrival choice">
+								<div class="arrival_container  container">
+									<div class="arrival_content content">
+										<h2 class="arrival_name name">
+											Arrival Date
+										</h2>	
+										<input class="arrival_form" type="date" name="Arrival_Time" id="Arrival_Time" required="required">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="second_row row">
+							<div class="source choice"> 
+								<div class="source_container container">
+									<div class="source_content content">
+										<h2 class="source_name name">
+											Source
+										</h2>	
+										<select name="Source" id="Source" required="required">
+	                                <option value="Delhi">Delhi</option>
+	                                <option value="Kolkata">Kolkata</option>
+	                                <option value="Mumbai">Mumbai</option>
+	                                <option value="Chennai">Chennai</option>
+	                            </select>
+									</div>
+								</div>
+							</div>
+							<div class="destination choice">
+								<div class="destination_container container">
+									<div class="destination_content content">
+										<h2 class="destination_name name">
+											Destination
+										</h2>	
+										<select name="Destination" id="Destination" required="required">
+	                                <option value="Cochin">Cochin</option>
+	                                <option value="Delhi">Delhi</option>
+	                                <option value="New Delhi">New Delhi</option>
+	                                <option value="Hyderabad">Hyderabad</option>
+	                                <option value="Kolkata">Kolkata</option>
+	                            </select>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+
+						<div class="third_row row">
+							<div class="stopage choice"> 
+								<div class="stopage_container container">
+									<div class="stopage_content content">
+										<h2 class="stopage_name name">
+											Stopage
+										</h2>	
+										<select name="Stopage" required="required">
+	                                <option value="0">Non-Stop</option>
+	                                <option value="1">1</option>
+	                                <option value="2">2</option>
+	                                <option value="3">3</option>
+	                                <option value="4">4</option>
+	                            </select>
+									</div>
+								</div>
+							</div>
+							<div class="airline choice">
+								<div class="airline_container container">
+									<div class="airline_content content">
+										<h2 class="airline_name name">
+											Preferable Airline
+										</h2>	
+										<select name="airline" id="airline" required="required">
+	                                <option value="Jet Airways">Jet Airways</option>
+	                                <option value="IndiGo">IndiGo</option>
+	                                <option value="Air India">Air India</option>
+	                                <option value="Multiple carriers">Multiple carriers</option>
+	                                <option value="SpiceJet">SpiceJet</option>
+	                                <option value="Vistara">Vistara</option>
+	                                <option value="Air Asia">Air Asia</option>
+	                                <option value="GoAir">GoAir</option>
+	                                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+	                                </option>
+	                                <option value="Jet Airways Business">Jet Airways Business</option>
+	                                <option value="Vistara Premium economy">Vistara Premium economy</option>
+	                                <option value="Trujet">Trujet</option>
+	                            </select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="submit">
+					<div class="submit_container">
+						<div class="sibmit_content">
+							<input type="submit" value="Submit" class="btn btn-secondary">
+						</div>
+					</div>
+				</section>
+
+			</form>
+
+			<div class="prediction_text">
+				<h2 class="predict_answer">{{ prediction_text }}</h2>
+			</div>
+
+		</div>		
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
